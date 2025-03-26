@@ -91,7 +91,7 @@ const About: FC = () => {
                 className="aspect-square w-full max-w-md mx-auto"
               >
                 <img
-                  src="public/oskar-portrait.jpg"
+                  src="/oskar-portrait.jpg"
                   alt="Oskar Sjöberg"
                   className="w-full h-full object-cover rounded-full shadow-lg"
                 />
