@@ -5,6 +5,7 @@ import Hero from './components/Hero'
 import HomeCases from './components/HomeCases'
 import Case from './pages/Case'
 import CaseStudy from './pages/CaseStudy'
+import About from './components/About'
 import './App.css'
 
 const ScrollToTop: FC = () => {
@@ -40,6 +41,7 @@ const App: FC = () => {
                   email="oskar.filip.sjoberg@gmail.com"
                   linkedIn="https://linkedin.com/in/oskarsjoberg1/"
                 />
+                <About />
                 <HomeCases />
               </main>
             } />
