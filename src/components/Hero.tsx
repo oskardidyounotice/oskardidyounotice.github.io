@@ -7,9 +7,9 @@ const Hero: FC<HeroProps> = ({ name, tagline, email, linkedIn }) => {
   const isMobile = useMediaQuery({ query: '(max-width: 768px)' })
 
   const scrollToContent = () => {
-    const homeCases = document.getElementById('home-cases')
-    if (homeCases) {
-      homeCases.scrollIntoView({ behavior: 'smooth' })
+    const aboutMe = document.getElementById('about-me')
+    if (aboutMe) {
+      aboutMe.scrollIntoView({ behavior: 'smooth' })
     }
   }
 
