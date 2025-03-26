@@ -18,6 +18,7 @@ const container = {
 const HomeCases: FC = () => {
   return (
     <motion.section
+      id="home-cases"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.4, ease: "easeIn" }}
