@@ -7,12 +7,9 @@ interface CaseCardProps {
   title: string
   description: string
   tags: string[]
-  logo: string
-  bgColor: string
-  compact?: boolean
 }
 
-const CaseCard: FC<CaseCardProps> = ({ id, title, description, tags, logo, bgColor, compact = false }) => {
+const CaseCard: FC<CaseCardProps> = ({ id, title, description, tags }) => {
   return (
     <motion.div
       variants={{

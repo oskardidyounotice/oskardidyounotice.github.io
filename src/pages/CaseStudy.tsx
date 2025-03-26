@@ -2,7 +2,6 @@ import { FC } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { caseStudies } from '../data/case-studies'
-import { CaseStudy as CaseStudyType } from '../data/types'
 import { useMediaQuery } from 'react-responsive'
 import { HeroProps } from '../data/types'
 

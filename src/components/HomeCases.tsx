@@ -1,5 +1,4 @@
 import { FC } from 'react'
-import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import CaseCard from './CaseCard'
 import { caseStudies } from '../data/case-studies'
@@ -39,7 +38,6 @@ const HomeCases: FC = () => {
             <CaseCard
               key={caseItem.id}
               {...caseItem}
-              compact={true}
             />
           ))}
         </motion.div>
