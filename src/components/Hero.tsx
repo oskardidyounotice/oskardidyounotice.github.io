@@ -6,6 +6,13 @@ import { useMediaQuery } from 'react-responsive'
 const Hero: FC<HeroProps> = ({ name, tagline, email, linkedIn }) => {
   const isMobile = useMediaQuery({ query: '(max-width: 768px)' })
 
+  const scrollToContent = () => {
+    const homeCases = document.getElementById('home-cases')
+    if (homeCases) {
+      homeCases.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-white px-4 sm:px-6 lg:px-8">
       <div className="absolute inset-0 z-0">
@@ -54,6 +61,43 @@ const Hero: FC<HeroProps> = ({ name, tagline, email, linkedIn }) => {
           </a>
         </motion.div>
       </div>
+      
+      <motion.button
+        onClick={scrollToContent}
+        className="absolute bottom-32 transform -translate-x-1/2 cursor-pointer bg-white w-16 h-16 flex item-center justify-center outline-none focus:outline-none"
+        style={{ backgroundColor: 'white', border: '1px solid white' }}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.8 }}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.95 }}
+      >
+        <motion.div
+          animate={{
+            y: [0, 10, 0],
+          }}
+          transition={{
+            duration: 1.5,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+          className="text-gray-600 hover:text-black flex items-center justify-center"
+        >
+          <svg
+            className="w-12 h-12"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M19 14l-7 7m0 0l-7-7m7 7V3"
+            />
+          </svg>
+        </motion.div>
+      </motion.button>
     </section>
   )
 }
