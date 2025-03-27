@@ -28,7 +28,7 @@ const About: FC = () => {
       transition={{ duration: 0.4, ease: "easeIn" }}
       className="py-24 bg-white"
     >
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto"> {/* px-4 sm:px-6 lg:px-8*/}
         <motion.div
           variants={container}
           initial="hidden"
@@ -36,7 +36,7 @@ const About: FC = () => {
           className="space-y-16"
         >
           {/* Two Column Layout */}
-          <motion.div variants={item} className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-24">
+          <motion.div variants={item} className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-24 max-w-6xl mx-auto max-sm:px-6 max-md:px-8 max-lg:px-12">
             {/* Left Column - Text */}
             <div className="text-left" id="about-me">
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
@@ -100,13 +100,17 @@ const About: FC = () => {
           </motion.div>
 
           {/* Experience Section */}
-          <motion.div variants={item}>
-            <h3 className="text-3xl font-bold text-gray-900 mb-6">Work Experience</h3>
-            <div className="space-y-6 justify-center">
-              <div className="text-center justify-center max-w-2xl m-auto">
-                <h4 className="text-lg font-semibold text-gray-800">UX/UI Designer, UX Lead</h4>
-                <p className="text-gray-600">NetConsult AB • 2022 - Present</p>
-                <p className="text-gray-600 mt-2 ">
+          <motion.div variants={item} className=" bg-gray-50 py-8 mx-auto max-sm:px-6 max-md:px-8 max-lg:px-12">
+            <h3 className="text-3xl font-bold text-gray-900 max-w-6xl mx-auto text-left mb-4">Work Experience</h3>
+            <div className="justify-center">
+              <div className="text-center justify-center max-w-6xl m-auto">
+                <div className="">
+                    <div className="md:flex gap-8 items-center">
+                        <h4 className="text-lg font-semibold text-gray-800 text-left">UX/UI Designer, UX Lead</h4>
+                        <p className="text-black text-left">NetConsult AB • 2022 - Present</p>
+                    </div>
+                </div>
+                <p className="text-gray-600 mt-2 text-left max-w-3xl">
                   Started out fresh as the only UX-designer which meant creating a foundation for the UX-work, processes, 
                   tools, and documentation. While delivering design resources for the teams and current clients. Later also 
                   focusing on leveraging the business side with the UX-space. Worked with different initiatives aimed at aquiring 
@@ -116,10 +120,12 @@ const About: FC = () => {
                   of creating a new business angles as well as creating value for the clients.
                 </p>
               </div>
-              <div className="text-center justify-center max-w-2xl m-auto py-8">
-                <h4 className="text-lg font-semibold text-gray-800">Software tester, Project leader, Productionmanager</h4>
-                <p className="text-gray-600">ProvideIT • 2016 - 2021</p>
-                <p className="text-gray-600 mt-2 ">
+              <div className="justify-center max-w-6xl m-auto text-left mt-4">
+                <div className="md:flex gap-8 items-center">
+                    <h4 className="text-lg font-semibold text-gray-800 text-left">Software tester, Project leader, Production manager</h4>
+                    <p className="text-black text-left">ProvideIT • 2016 - 2021</p>
+                </div>
+                <p className="text-gray-600 mt-2 text-left max-w-3xl">
                 Initially worked with quality assurance for our web-projects focusing on testing
                 user interfaces and advanced administrative tools with diverse workflows and
                 user roles. I later moved to project management due to my involvement and

@@ -24,7 +24,7 @@ const HomeCases: FC = () => {
       transition={{ duration: 0.4, ease: "easeIn" }}
       className="mb-24 bg-white"
     >
-      <div className="max-w-6xl mx-auto px-4">
+      <div className="max-w-6xl mx-auto max-sm:px-6 max-md:px-8 max-lg:px-12">
         <div className="flex justify-between items-center mb-8">
           <h2 className="text-3xl font-bold text-gray-900">An insight into my work</h2>
         </div>
